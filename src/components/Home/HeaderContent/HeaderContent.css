@@ -1,0 +1,10 @@
+.main{
+    margin-top:40px;
+}
+.main h1{
+    font-weight:1000;
+    font-size:60px;
+}
+.main small{
+    text-align:justify;
+}

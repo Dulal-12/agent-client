@@ -1,0 +1,9 @@
+.webImg img{
+    height:50px;
+    margin-top:80px;
+    opacity:1;
+    
+}
+.webImg li{
+    list-style-type: none; 
+}

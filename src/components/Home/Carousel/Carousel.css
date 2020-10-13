@@ -1,0 +1,10 @@
+.carouselImage img
+{
+   width:500px;
+   height:500px;
+    
+}
+.carouselDesign {
+    background-color:#111430;
+    font-family: 'Poppins', sans-serif;
+}
