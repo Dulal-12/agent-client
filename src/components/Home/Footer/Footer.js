@@ -19,7 +19,7 @@ const Footer = () => {
                     
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="exampleInputPassword1">Name</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Your name/Company's name"/>
                 </div>
                 
