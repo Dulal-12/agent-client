@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import Header from './components/Home/Header/Header';
 import Home from './components/Home/Home/Home';
@@ -8,10 +8,17 @@ import {
   Route,
 } from "react-router-dom";
 import Login from './components/Login/Login';
+import ServicesOfUser from './components/userDetail/ServicesOfUser/ServicesOfUser';
+import Review from './components/Review/Review';
+import Order from './components/Order/Order';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+export const user = createContext();
 
 function App() {
+  const [loggedInuser,setLoggedInuser] = useState({});
   return (
-    <Router>
+    <user.Provider value={[loggedInuser,setLoggedInuser]}>
+      <Router>
     <Switch>
         <Route exact path="/">
            <Home></Home>
@@ -19,9 +26,25 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
+       
+        <Route path="/service">
+          <ServicesOfUser></ServicesOfUser>
+        </Route>
+        <Route path="/review">
+          <Review></Review>
+        </Route> 
+        <PrivateRoute path="/order/:id">
+         <Order></Order>
+        </PrivateRoute>
+
+
+       
     </Switch>
    
 </Router>
+
+</user.Provider>
+
   );
 }
 

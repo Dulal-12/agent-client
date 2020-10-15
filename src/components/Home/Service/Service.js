@@ -4,7 +4,7 @@ import service1 from '../../../images/icons/service1.png';
 import services2 from '../../../images/icons/service2.png';
 import services3 from '../../../images/icons/service3.png';
 import ServicesCard from '../ServicesCard/ServicesCard';
- const serviceData = [{
+ export const serviceData = [{
                         id:1,
                         img:service1,
                         title:'Web & Mobile design',
@@ -27,7 +27,7 @@ const Service = () => {
     return (
         <>
         <h2 className="mt-5" style={{textAlign:'center',fontWeight:'1000'}}>Provide awsome <span style={{color:"green"}}>services</span></h2>
-        <div className="row">
+        <div className="row ca">
            
                 {
                     serviceData.map(service=><ServicesCard service={service} key={service.id}></ServicesCard>)
