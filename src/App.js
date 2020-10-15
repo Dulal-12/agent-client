@@ -36,6 +36,7 @@ function App() {
         <PrivateRoute path="/order/:id">
          <Order></Order>
         </PrivateRoute>
+        
 
 
        
