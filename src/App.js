@@ -12,6 +12,8 @@ import ServicesOfUser from './components/userDetail/ServicesOfUser/ServicesOfUse
 import Review from './components/Review/Review';
 import Order from './components/Order/Order';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import DynamicService from './components/userDetail/ServicesOfUser/DynamicService';
+
 export const user = createContext();
 
 function App() {
@@ -28,7 +30,7 @@ function App() {
         </Route>
        
         <Route path="/service">
-          <ServicesOfUser></ServicesOfUser>
+         <DynamicService></DynamicService>
         </Route>
         <Route path="/review">
           <Review></Review>

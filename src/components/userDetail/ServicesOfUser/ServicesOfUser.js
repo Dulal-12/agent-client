@@ -1,41 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { serviceData } from '../../Home/Service/Service';
 import SideBar from '../SideBar';
 import './ServiceOfUser.css';
-const ServicesOfUser = () => {
-    const {id} = useParams();
+import { user } from '../../../App';
+
+const ServicesOfUser = (props) => {
+    const {title,text} = props.service2;
+    const finalImg = serviceData.find(service=>service.title === title);
+    const{img} = finalImg
     
     return (
-        <div className="row">
-            <div className="col-md-4">
-                <SideBar></SideBar>
-            </div>
-            <div className="col-md-7 service serviceDetail m-5  ">
-            <div className= "col-md-4 card   mt-5 mb-5  ">
-                            
-                            <div className="d-flex justify-content-center">
-                                  <img src='' style={{height:'50px'}} alt="" srcset=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <button className="btn btn-light">Done</button>
-                            </div>
-
-                            <div className="d-flex justify-content-center">
-                                  <h4 style={{fontWeight:'1000'}}></h4>
-                            </div>
-                            
         
-                            <div className="ml-2">
-                                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                   Qui assumenda nesciunt repellendus illum repudiandae facere
-                                   esse accusamus vero possimus voluptatibus yes done?</p>
-                            </div>
-                           
-                            </div>
-                     
-
-            </div>
-            
+        <div className= "col-md-3 card mr-5 mt-3 ml-2 " style={{display:"inline-flex"}}>
+            <div className="d-flex justify-content-center">
+        <img src={img} style={{height:'50px'}} alt="" srcset=""/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button className="btn btn-light">Done</button>
         </div>
+
+  <div className="d-flex justify-content-center">
+        <h4 style={{fontWeight:'1000'}} >{title}</h4>
+  </div>
+  
+
+  <div className="ml-2">
+        <p>{text}</p>
+  </div>
+  
+
+       </div>
+           
+                    
     );
 };
 
