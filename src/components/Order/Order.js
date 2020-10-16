@@ -57,7 +57,7 @@ const Order = () => {
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" value="Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Qui assumenda nesciunt repellendus illum repudiandae facere esse accusamus vero possimus voluptatibus yes done?" rows="5" placeholder="project details"></textarea>
+               ?" rows="5" placeholder="project details"></textarea>
              </div>
 
              <div class="form-group">
