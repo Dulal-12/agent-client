@@ -17,7 +17,7 @@ const Review = () => {
         information.description = description;
         information.desigenation = desigenation;
         
-        fetch('http://localhost:5000/review',{
+        fetch('https://radiant-retreat-70198.herokuapp.com/review',{
             method: 'POST',
             body: JSON.stringify(information),
             headers: {

@@ -24,7 +24,7 @@ const Order = () => {
         orderPlace.text = text;
         orderPlace.number = id;
         
-        fetch('http://localhost:5000/order',{
+        fetch('https://radiant-retreat-70198.herokuapp.com/order',{
             method: 'POST',
             body: JSON.stringify(orderPlace),
             headers: {

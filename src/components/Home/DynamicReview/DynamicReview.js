@@ -5,7 +5,7 @@ const DynamicReview = () => {
     const[dynamicReview,setDynamicReview] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/dynamicReview')
+        fetch('https://radiant-retreat-70198.herokuapp.com/dynamicReview')
     .then(res=>res.json())
     .then(data=>{
       setDynamicReview(data);

@@ -5,7 +5,7 @@ import AdminServiceListData from './AdminServiceListData';
 const AdminServiceList = () => {
     const [allData,setAllData]  = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allData')
+        fetch('https://radiant-retreat-70198.herokuapp.com/allData')
         .then(res=>res.json())
         .then(data=>{
           setAllData(data);

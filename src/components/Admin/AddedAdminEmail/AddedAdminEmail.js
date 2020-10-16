@@ -11,7 +11,7 @@ const AddedAdminEmail = () => {
         const adminEmail = document.getElementById('exampleInputEmail1').value;
         const email = {Email12:adminEmail};
 
-            fetch('http://localhost:5000/adminEmail',{
+            fetch('https://radiant-retreat-70198.herokuapp.com/adminEmail',{
             method: 'POST',
             body: JSON.stringify(email),
             headers: {

@@ -11,7 +11,7 @@ const EmailCheck = () => {
 
         const Email2 = document.getElementById("email").value;
        
-           fetch('http://localhost:5000/adminEmail11?email='+Email2)
+           fetch('https://radiant-retreat-70198.herokuapp.com/adminEmail11?email='+Email2)
             .then(res=>res.json())
             .then(data=>{
               setAdminEmail1(data)

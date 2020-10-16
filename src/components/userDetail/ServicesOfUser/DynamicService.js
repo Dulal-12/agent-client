@@ -7,7 +7,7 @@ const DynamicService = () => {
     const [service1,setService1] = useState([]);
     const [loggedInuser,setLoggedInuser] = useContext(user);
     useEffect(()=>{
-        fetch('http://localhost:5000/service?email='+loggedInuser.email)
+        fetch('https://radiant-retreat-70198.herokuapp.com/service?email='+loggedInuser.email)
         .then(res=>res.json())
         .then(data=>{
           setService1(data);
