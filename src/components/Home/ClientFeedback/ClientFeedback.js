@@ -33,7 +33,6 @@ const ClientFeedback = () => {
                     clientData.map(client=><ClientCard client={client} key={client.id}></ClientCard>)
                 }
            
-            
         </div>
         </>
     );

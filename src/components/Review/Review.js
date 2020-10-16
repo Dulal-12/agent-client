@@ -7,7 +7,8 @@ const Review = () => {
     const [loggedInuser,setLoggedInuser] = useContext(user);
     const [review1,setReview1] = useState({});
     const history = useHistory();
-    const review = (e)=>{
+
+    const review = ()=>{
         const description = document.getElementById("exampleFormControlTextarea1").value;
         const desigenation = document.getElementById("exampleInputPassword1").value;
         const information = {...review1};

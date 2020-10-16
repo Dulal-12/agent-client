@@ -7,8 +7,6 @@ import carousel5 from '../../../images/carousel-5.png';
 import {Carousel} from "react-bootstrap";
 import './Carousel.css';
 
-
-
 const CarouselSet = () => {
     return (
        <div className="carouselDesign">

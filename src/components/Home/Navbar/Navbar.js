@@ -1,9 +1,13 @@
-import React from 'react';
-import logo from '../../../images/logos/logo.png';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { user } from '../../../App';
+import logo from '../../../images/logos/logo.png';
 
 
 const Navbar = () => {
+    
+    const [loggedInuser,setLoggedInuser] = useContext(user);
+
     return (
         <main>
         <nav className="navbar navbar-expand-lg navbar-light  ">
@@ -17,23 +21,25 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link to="/#" className="nav-link mr-5">Our Protfolio</Link>
                          </li>
-                       <li className="nav-item">
+                         <li className="nav-item">
                             <Link to="/#" className="nav-link mr-5">Our Team</Link>
-                        </li>
+                          </li>
                         <li className="nav-item">
                             <Link to="/#" className="nav-link mr-5 ">Contact Us</Link>
                         </li>
-                        <li className="nav-item">
-                           <Link to ="/login"> <button className="btn btn-dark mr-5">Log In</button></Link>
-                        </li>
-                        <li className="nav-item">
-                           <Link to ="/admin"> <button className="btn btn-dark mr-5">Admin</button></Link>
-                        </li>
+                        {
+                            loggedInuser.email? <li className="nav-item">
+                            <Link to ="/admin"> <button className="btn btn-dark mr-5">Admin</button></Link>
+                            </li>:<li className="nav-item">
+                            <Link to ="/login"> <button className="btn btn-dark mr-5">Log In</button></Link>
+                          </li>
+                        }
+                       
                 </ul>
             </div>
            
-</nav>
-</main>
+     </nav>
+    </main>
     );
 };
 

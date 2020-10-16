@@ -16,6 +16,7 @@ import {
 import EmailCheck from './components/Admin/EmailCheck';
 import AdminServiceList from './components/Admin/AdminServiceList/AdminServiceList';
 import AddedAdminEmail from './components/Admin/AddedAdminEmail/AddedAdminEmail';
+import AddService from './components/Admin/AddService/AddService';
 
 
 export const user = createContext();
@@ -51,6 +52,9 @@ function App() {
                 </Route>
                 <Route exact path="/adminEmail">
                   <AddedAdminEmail></AddedAdminEmail>
+                </Route>
+                <Route exact path="/addService">
+                 <AddService></AddService>
                 </Route>
                
 

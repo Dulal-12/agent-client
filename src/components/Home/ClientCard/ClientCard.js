@@ -3,7 +3,7 @@ import React from 'react';
 const ClientCard = (props) => {
     const {name,detail,img} = props.client;
     return (
-        <div className= "col-md-4 card   mt-5 mb-5 p-5  ">
+        <div className= "col-md-4 card  mt-5 mb-5 p-5  ">
                     <div className="d-flex justify-content-center">
                           <img src={img} style={{height:'50px'}} alt="" srcset=""/>
                     </div>
@@ -20,7 +20,7 @@ const ClientCard = (props) => {
                            Qui assumenda nesciunt repellendus illum repudiandae facere
                            esse accusamus vero possimus voluptatibus yes done?</p>
                     </div>
-                     </div>
+                    </div>
                
     );
 };

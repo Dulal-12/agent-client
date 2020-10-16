@@ -3,6 +3,7 @@ import DynamicCard from '../DynamicCard/DynamicCard';
 
 const DynamicReview = () => {
     const[dynamicReview,setDynamicReview] = useState([]);
+
     useEffect(()=>{
         fetch('http://localhost:5000/dynamicReview')
     .then(res=>res.json())
@@ -19,8 +20,7 @@ const DynamicReview = () => {
                     dynamicReview.map(review=><DynamicCard review={review}></DynamicCard>)
                 }
            
-            
-        </div>
+         </div>
         </>
     );
 };

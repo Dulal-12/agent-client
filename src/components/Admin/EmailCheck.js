@@ -1,21 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import adminEmail from './adminEmail';
 
 const EmailCheck = () => {
     const history = useHistory();
+    const [adminEmail1,setAdminEmail1] = useState([]);
+   
+
     const AdminService = ()=>{
-        const email = document.getElementById("email").value;
+
+        const Email2 = document.getElementById("email").value;
+       
+           fetch('http://localhost:5000/adminEmail11?email='+Email2)
+            .then(res=>res.json())
+            .then(data=>{
+              setAdminEmail1(data)
+            })
+        
+      
        adminEmail.map(email1=>{
-        if(email === email1)
+           
+        if(Email2 === email1 || adminEmail1.length>0 )
         {
             history.push('/adminservice')
         }
-        else{
-            alert(' Please enter valid email!!!!Ops')
-        }
+       
        })
-       console.log(adminEmail)
+      
     }
 
     return (

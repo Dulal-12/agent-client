@@ -7,10 +7,13 @@ import { serviceData } from '../Home/Service/Service';
 const Order = () => {
     const [loggedInuser,setLoggedInuser] = useContext(user);
     const {id} = useParams();
+
     const data = serviceData.find(service=>parseInt(service.id)===parseInt(id));
     const {img,title} = data;
+
     const [order1,setOrder1] = useState({});
     const history = useHistory();
+
     const order = ()=>{
         const text = document.getElementById("exampleFormControlTextarea1").value;
         const orderPlace = {...order1};
@@ -28,10 +31,7 @@ const Order = () => {
               'Content-type': 'application/json; charset=UTF-8',
             },
           })
-          history.push('/service');
-
-
-    }
+          history.push('/service');}
 
     return (
         <div className="row">
